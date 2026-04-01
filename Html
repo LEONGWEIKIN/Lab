@@ -1,28 +1,70 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title> second </title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seminar Form</title>
 </head>
+
 <body>
 
-    <p>
-        <br>
-        <img src="yessir.jpg" alt="yessir" title = "yessir">
-        <img src="yessir.jpg" alt="yessir" height="21" width="21" >
-        <img src="yessir.jpg" alt="yessir" height="42" width="42" >
-    </p>
+<form method="post" action="https://mercury.swin.edu.au/it000000/formtest.php">
 
-    <hr>
+<fieldset>
+<legend>Personal Details</legend>
 
-    <p><a href="http://ecampus.inti.edu.my/"> ECampus</a></p>
-    <p><a href="http://ecampus.inti.edu.my/" title=ECampus target=_self> ECampus</a></p>
-    <p><a href="http://ecampus.inti.edu.my/" target=_blank> ECampus</a></p>
-    <p>Write to <a href="mailto:106398154@student.swin.edu.au" >Ethan</a> for consultation appointment</p>
-    <p><a href="http://ecampus.inti.edu.my/">
-    <img src="yessir.jpg" alt="Coin" />
-    </a></p>
+<p>
+<label for="fname">First Name:</label>
+<input type="text" name="fname" id="fname" pattern="[A-Za-z]{2,20}" required>
+</p>
+
+<p>
+Gender:<br>
+
+<label for="male">Male</label>
+<input type="radio" name="gender" id="male" value="M" required>
+
+<label for="female">Female</label>
+<input type="radio" name="gender" id="female" value="F">
+
+<label>Other <input type="radio" name="gender" value="GAY"></label>
+</p>
+
+</fieldset>
+
+<p>
+Things you like about the seminar<br>
+
+<label for="loc">Location</label>
+<input type="checkbox" name="things[]" id="loc" value="location">
+
+<label for="fod">Food</label>
+<input type="checkbox" name="things[]" id="fod" value="food">
+
+<label for="spe">Speaker</label>
+<input type="checkbox" name="things[]" id="spe" value="speaker" checked>
+</p>
+
+<p>
+<label for="rk">How would you like to rank the seminar?</label><br>
+
+<select name="rank" id="rk">
+<option value="3" selected>Excellent</option>
+<option value="2">Normal</option>
+<option value="1">Very bad</option>
+</select>
+</p>
+
+<p>
+<label>
+Comments<br>
+<textarea name="comments" rows="4" cols="20">Enter comments here.</textarea>
+</label>
+</p>
+
+<input type="submit" value="Submit Now">
+
+</form>
 
 </body>
-
 </html>
